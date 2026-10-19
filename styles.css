@@ -1,0 +1,76 @@
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #fff;
+  color: #161616;
+  font: 14px/1.42 Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: #1971aa; text-decoration: none; }
+a:hover, a:focus-visible { color: #0a507e; text-decoration: underline; }
+a:focus-visible { outline: 2px solid #1971aa; outline-offset: 3px; }
+.page { width: min(100% - 40px, 810px); margin: 44px auto 58px; }
+.profile h1 {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -.03em;
+}
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 27px; align-items: start; }
+.biography p { margin: 0 0 16px; }
+.biography strong, .publication-info strong { font-weight: 700; }
+.contact { text-align: center; padding-top: 3px; }
+.portrait-photo { display: block; width: 200px; height: 242px; object-fit: cover; object-position: center 42%; background: #eee9e2; }
+.section { margin-top: 48px; }
+.section h2 { font-size: 23px; font-weight: 400; letter-spacing: -.025em; margin: 0 0 12px; }
+.section > p { margin: 0; }
+.publication-list { margin-top: 17px; }
+.publication {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  margin: 0 0 27px;
+  min-height: 126px;
+}
+.thumbnail {
+  width: 220px;
+  height: 124px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background: #f5f6f6;
+}
+.thumbnail img { width: 100%; height: 100%; object-fit: contain; }
+.publication-info h3 { font-size: 14px; line-height: 1.36; font-weight: 700; margin: 0 0 4px; }
+.publication-info p { margin: 0 0 3px; }
+.publication-info .venue { margin-top: 4px; }
+.publication-info .links { margin-top: 5px; }
+.note { color: #222; }
+.compact-section { margin-top: 39px; }
+.compact-section ul { margin: 12px 0 0; padding-left: 19px; }
+.compact-section li { padding-left: 2px; margin: 7px 0; }
+footer { border-top: 1px solid #eee; margin-top: 42px; padding-top: 14px; color: #777; font-size: 12px; }
+@media (max-width: 700px) {
+  .page { width: min(100% - 32px, 810px); margin-top: 29px; }
+  .intro { grid-template-columns: minmax(0, 1fr) 185px; gap: 18px; }
+  .portrait-photo { width: 185px; height: 225px; }
+  .publication { grid-template-columns: 178px minmax(0, 1fr); gap: 18px; }
+  .thumbnail { width: 178px; height: 100px; }
+}
+@media (max-width: 520px) {
+  body { font-size: 14px; }
+  .profile h1 { font-size: 28px; }
+  .intro { display: flex; flex-direction: column-reverse; align-items: center; gap: 23px; }
+  .portrait-photo { width: 175px; height: 212px; }
+  .biography { width: 100%; }
+  .section { margin-top: 40px; }
+  .publication { grid-template-columns: 1fr; gap: 9px; margin-bottom: 27px; }
+  .thumbnail { width: 100%; height: 155px; }
+  .publication-info h3 { margin-bottom: 5px; }
+  .compact-section { margin-top: 36px; }
+}
